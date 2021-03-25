@@ -23,5 +23,7 @@ if response is not None:
         for element in list_elements:
             link = element.select("a")[0]["href"]
             subpage = bs4.BeautifulSoup(requests.get(base_url + link))
+            cats = subpage.select("div", class_="catlinks")[0]
+            print(cats)
 
 
