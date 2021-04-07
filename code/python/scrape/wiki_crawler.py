@@ -1,7 +1,8 @@
 import bs4
 import requests
 from download_pages import start_save_process
-from multiprocessing import Queue
+
+
 root_url = "https://en.wikipedia.org/wiki/List_of_people_considered_father_or_mother_of_a_scientific_field"
 base_url = "https://en.wikipedia.org"
 
