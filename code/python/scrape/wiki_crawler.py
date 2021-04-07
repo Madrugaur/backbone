@@ -1,6 +1,7 @@
 import bs4
 import requests
-
+from download_pages import start_save_process
+from multiprocessing import Queue
 root_url = "https://en.wikipedia.org/wiki/List_of_people_considered_father_or_mother_of_a_scientific_field"
 base_url = "https://en.wikipedia.org"
 
@@ -31,15 +32,16 @@ def descend(page):
                 handle_list(page)
             else:
                 handle_ambiguous_page(page)
-    except Exception:
-        print("Failed to descend")
+    except Exception as e:
+        print(e)
 
 
 def handle_ambiguous_page(page):
     biography_infobox = page.find(class_="infobox biography vcard")
     if biography_infobox is not None:
         have_visited[page] = True
-        print(page.find(id="firstHeading").text)
+        start_save_process(page)
+        return
 
 
 def handle_category(page):
