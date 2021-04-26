@@ -13,10 +13,10 @@ def generate():
         freq = calculate_frequency(counts, total)
         sorted_freq = sorted(freq.items(), key=lambda i: i[1])
         sorted_freq.reverse()
-        data.update(counts)
-        data.update(freq)
+        data.update({"counts": counts})
+        data.update({"freq": freq})
         data.update({"total": total})
-        file = open("data/freq/" + f, "w", encoding="utf8")
+        file = open("data/freq/" + f.replace(".txt", ".json"), "w", encoding="utf8")
         file.write(json.dumps(data))
 
 
