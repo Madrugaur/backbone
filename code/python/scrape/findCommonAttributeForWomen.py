@@ -9,7 +9,7 @@ conclusion: Fun fact, there are no common Categories for women scientist on Wiki
         running this experiment I have discovered that there is little consistent category usage which makes my job
         much harder. So bios about women don't have any categories relating to women attached. So what I'm going to do
         is crawl through all the bios relating to people in STEM and then try to discover a reliable way of dividing
-        those by gender
+        those by people
 author: Braden Little
 """
 

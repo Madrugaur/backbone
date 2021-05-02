@@ -39,6 +39,6 @@ if __name__ == '__main__':
     for f in files:
         data = read_json(f)
         gender_guess = guess_gender(data)
-        data.update({"gender": switch[gender_guess]})
-        with open("data/gender/" + f, "w+", encoding="utf8") as new_file:
+        data.update({"people": switch[gender_guess]})
+        with open("data/people/" + f, "w+", encoding="utf8") as new_file:
             new_file.write(json.dumps(data))
