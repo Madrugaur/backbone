@@ -1,0 +1,36 @@
+{
+    "top": {
+        "male": {
+            "count": 1518,
+            "proportion": 90.88706750832614,
+            "length": 2324
+        },
+        "female": {
+            "count": 188,
+            "proportion": 9.11293249167385,
+            "length": 1882
+        },
+        "ambiguous": {
+            "count": 0,
+            "proportion": 0,
+            "length": 0
+        }
+    },
+    "bottom": {
+        "male": {
+            "count": 952,
+            "proportion": 55.16579516579516,
+            "length": 137
+        },
+        "female": {
+            "count": 657,
+            "proportion": 41.45068145068145,
+            "length": 150
+        },
+        "ambiguous": {
+            "count": 97,
+            "proportion": 3.383523383523383,
+            "length": 83
+        }
+    }
+}
