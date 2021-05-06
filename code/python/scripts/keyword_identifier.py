@@ -15,10 +15,11 @@ def find_keywords():
         with open("data/people" + f, "r", encoding="utf8") as file:
             person_data = json.load(file)
             for word in person_data["freq"].keys():
-                freq = math.log(person_data["freq"][word])
-                lr = likelihood_ratio(freq, 1)
+                local_freq = math.log(person_data["freq"][word])
+                lr = likelihood_ratio(local_freq, 1)
                 p = chi2.sf(lr, 1)
                 print('p: %.30f' % p)
+
 
 if __name__ == '__main__':
     find_keywords()
